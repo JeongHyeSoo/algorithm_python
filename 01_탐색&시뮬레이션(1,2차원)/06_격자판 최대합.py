@@ -18,9 +18,9 @@ for i in range(0,n):
     for j in range(0,n):
         arrHap[i]+=arrSquare[i][j]
         arrHap[n+i]+=arrSquare[j][i]
-for i in range(0,2):
-    for j in range(0,n):
-        arrHap[2*n+i]+=arrSquare[j][j]
+for j in range(0,n):
+    arrHap[2*n]+=arrSquare[j][j]
+    arrHap[2*n+1]+=arrSquare[j][n-1-j]
 max=0
 for i in range(0,n*2+2):
     if max<arrHap[i]:
